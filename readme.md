@@ -59,3 +59,7 @@ TypeORM
 bcrypt
 
 JSON Web Tokens (JWT)
+
+
+![WhatsApp Image 2025-05-25 at 21 08 01_82a7e203](https://github.com/user-attachments/assets/23b39a95-c866-4998-af4e-213bbafa92c4)
+
