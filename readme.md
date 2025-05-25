@@ -16,8 +16,6 @@ A secure and role-based User Access Management System built with **Node.js**, **
 ---
 
 ## 📁 Project Structure
-
-
 server/
 ├── src/
 │ ├── config/ # Database config
