@@ -60,6 +60,15 @@ bcrypt
 
 JSON Web Tokens (JWT)
 
+user signup 
+![WhatsApp Image 2025-05-25 at 21 04 10_ffa6460a](https://github.com/user-attachments/assets/8e0ce5de-3269-4948-a12d-e4c6e3c8660a)
+
+user dashboard
 
 ![WhatsApp Image 2025-05-25 at 21 08 01_82a7e203](https://github.com/user-attachments/assets/23b39a95-c866-4998-af4e-213bbafa92c4)
+
+user request 
+![WhatsApp Image 2025-05-25 at 21 10 46_a7753c57](https://github.com/user-attachments/assets/f3fd5190-52e4-4352-8bbb-7235b06d2f31)
+
+
 
