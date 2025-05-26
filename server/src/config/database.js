@@ -1,5 +1,3 @@
-
-
 const { DataSource } = require('typeorm');
 require('dotenv').config();
 
@@ -14,19 +12,16 @@ const AppDataSource = new DataSource({
   username: "postgres",
   password: "Raushan@2000",
   database: "postgres",
- entities: [User, Software, Request],
+  entities: [User, Software, Request],
   synchronize: true,
 });
+
 AppDataSource.initialize()
   .then(() => {
     console.log('Database connected successfully');
-    process.exit(0);
-
-    
   })
   .catch((error) => {
     console.error('Database connection error:', error);
-    process.exit(1);
   });
 
-module.exports = AppDataSource; 
+module.exports = { AppDataSource }; 

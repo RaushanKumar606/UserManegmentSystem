@@ -5,7 +5,7 @@ const User = require('../models/user');
 
 // Helper function to get User repository safely
 const getUserRepository = () => {
-  if (!AppDataSource) {
+  if (!AppDataSource.isInitialized) {
     throw new Error('Database not initialized');
   }
   return AppDataSource.getRepository(User);

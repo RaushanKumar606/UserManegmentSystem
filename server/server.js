@@ -6,6 +6,10 @@ const router = require('./src/router/index');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Configure CORS
 app.use(cors({
   origin: 'http://localhost:3000',
@@ -14,8 +18,8 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-app.use(express.json());
-app.use(router);
+// API routes
+app.use('/api', router);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
