@@ -62,21 +62,25 @@ const MyRequests = () => {
     };
 
     return (
-        <Container className="py-5">
+        <Container className="mt-10 py-4">
             <Card>
                 <Card.Header>
-                    <h2>My Access Requests</h2>
+                    <h2 className="mb-0">My Access Requests</h2>
                 </Card.Header>
                 <Card.Body>
-                    {error && <Alert variant="danger" onClose={() => setError("")} dismissible>{error}</Alert>}
+                    {error && (
+                        <Alert variant="danger" onClose={() => setError("")} dismissible>
+                            {error}
+                        </Alert>
+                    )}
 
                     {loading ? (
                         <p>Loading your requests...</p>
                     ) : requests.length === 0 ? (
                         <p>You haven't made any access requests yet.</p>
                     ) : (
-                        <Table striped bordered hover responsive>
-                            <thead>
+                        <Table striped bordered hover responsive className="align-middle text-center">
+                            <thead className="table-dark">
                                 <tr>
                                     <th>Software</th>
                                     <th>Access Type</th>
@@ -87,7 +91,7 @@ const MyRequests = () => {
                             <tbody>
                                 {requests.map((request) => (
                                     <tr key={request.id}>
-                                        <td>{request.software?.name || 'N/A'}</td>
+                                        <td>{request.software?.name || "N/A"}</td>
                                         <td>{getAccessTypeBadge(request.accessType)}</td>
                                         <td>{request.reason}</td>
                                         <td>{getStatusBadge(request.status)}</td>
@@ -102,4 +106,4 @@ const MyRequests = () => {
     );
 };
 
-export default MyRequests; 
+export default MyRequests;

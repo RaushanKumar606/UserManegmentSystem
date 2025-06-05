@@ -40,7 +40,7 @@ const Navbar = () => {
       case 'Employee':
         return [
           ...commonLinks,
-          { name: 'My Tasks', path: '/employee/tasks' },
+          { name: 'My Tasks', path: 'my-requests' },
           { name: 'Request History', path: '/employee/history' }
         ];
       default:
